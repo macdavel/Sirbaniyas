@@ -98,13 +98,17 @@ textarea {
    ========================================================================== */
 
 html,body{
-    min-height: 100%;
+  height: 100%;
+}
+
+.gstyle{
+  height: 100%
 }
 
 .gallery {
   background: #FAFAFA;
   vertical-align: middle;
-  /*height: 700px;*/
+  height: 100%;
 
 }
 
@@ -129,54 +133,39 @@ html,body{
 }
 
 
-.gallery .flickity-viewport {
+/*.gallery .flickity-viewport {
   position: absolute;
-  /* width: 100%; */
   height: 100%;
-}
+}*/
 
 
 
-.gallery {
+/*.gallery {
   background: #FAFAFA;
-  padding-bottom: 46%; /* gallery height has percentage of width */
-}
+  padding-bottom: 100%;  gallery height has percentage of width 
+}*/
 
 /* inherit size from gallery */
-.gallery .flickity-viewport {
-  /*position: absolute;*/
+/*.gallery .flickity-viewport {
+  position: absolute;
   width: 100%;
   height: 100%;
-}
-
-
-
-
-
+}*/
 
 
 
 .the_headline{
-        font-family: "Roboto", Arial;
+        font-family: georgia;
         font-weight: 100;
         text-align: center;
         position: absolute;
         background-color: transparent;
         z-index: 20;
         color: white;
-        font-style: oblique;
+        /*font-style: oblique;*/
         width: 450px;
         left: 35%;
       }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -194,8 +183,8 @@ body {
   color: #fffce1;
   font-weight: 100;
   font-size: 1em;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-style: oblique;
+  /*font-family: 'Roboto', Arial, sans-serif;*/
+  /*font-style: oblique;*/
 }
 
 a {
@@ -206,7 +195,7 @@ a {
 }
 
 p{
-  font-family: 'Roboto';
+  font-family: verdana;
   font-size: 15px;
   margin-left: 25px;
   font-weight: 100;
@@ -269,7 +258,7 @@ button:focus {
 
 
 .container {
-  background: #373a47;
+  /*background: #373a47;*/
 }
 
 .menu-wrap a {

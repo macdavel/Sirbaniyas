@@ -8,7 +8,8 @@ var flkty = new Flickity('.gallery',{
 	imagesLoaded: true,
 	setGallerySize: false,
 	percentPosition: true,
-	contain: true
+	contain: true,
+  resize: true,
 });
 
 
