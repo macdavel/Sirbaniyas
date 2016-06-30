@@ -45,16 +45,41 @@ Below is the file structure for the website.
 Quick Start: 
 	Adding a mark/song 
 
-		First upload the sound to soundcloud and retrieve the trackID, a string of numbers identifying the song. To get the trackID, go to soundcloud, click on the song and then select share. A popup appears with three tabs. Select the embed tab and copy the code displayed. The track ID is the string of numbers inbetween the tracks and '&'  ( e.g api.soundcloud.com/tracks/268924575&). 
+		First upload the sound to soundcloud and retrieve the trackID,
+		a string of numbers identifying the song. To get the trackID,
+		go to soundcloud, click on the song and then select share.
+		A popup appears with three tabs. Select the embed tab and copy the code displayed.
+		The track ID is the string of numbers inbetween the tracks and '&' 
+		( e.g api.soundcloud.com/tracks/268924575&). 
 
-		After getting the track ID, go to the Main.js file for the main page. On line 190 is a list of lists titled marker_objects. Each sublist in this list represents a point on the map. To add a new point you must create a new sublist. The sublist must contain 5 elements in the following order [latitude, longitude, SCtrackID, yearUploaded, imageURL].
+		After getting the track ID, go to the Main.js file for the main page.
+		On line 190 is a list of lists titled marker_objects. 
+		Each sublist in this list represents a point on the map.
+		To add a new point you must create a new sublist. 
+		The sublist must contain 5 elements in the following order 
+		[latitude, longitude, SCtrackID, yearUploaded, imageURL].
 
 	Change color of the marker Icons:
 
-		I use webkit filters to change the color of the icons. To achieve this, each img is assigned a letter and number at the end of its URL(img[src^='http://ikidsawards.kidscreen.com/Content/images/dotCircle.png?j=0']). In this case the unique letter is j=0. The letter represents a unique year and the number after the letter is the image ID. To change the color, go to main.css and locate the styling labeled img[src^='http://ikidsawards.kidscreen.com/Content/images/dotCircle.png?j=']. This styling affects all the marks/ dots with the letter j(a particular year- in this case j is 2016). The letters are arbitrarily selected. To add more years edit the create_marker function on line 397 in main.js. This function uses if statements to assign a letter to the img url based on the year it has been assigned in the marker_objects list. Once you have added the new letter, go to main.css and create a new style for the letter you created.
+		I use webkit filters to change the color of the icons. 
+		To achieve this, each img is assigned a letter and number at the end of its 
+		URL(img[src^='http://ikidsawards.kidscreen.com/Content/images/dotCircle.png?j=0']).
+		In this case the unique letter is j=0. The letter represents a unique year and the 
+		number after the letter is the image ID. To change the color, go to main.css and
+		locate the styling labeled img[src^='http://ikidsawards.kidscreen.
+		com/Content/images/dotCircle.png?j='].
+		This styling affects all the marks/ dots with the letter
+		 j(a particular year- in this case j is 2016). 
+		The letters are arbitrarily selected.
+		To add more years edit the create_marker function on line 397 in main.js. 
+		This function uses if statements to assign a letter to the img url based on 
+		the year it has been assigned in the marker_objects list. 
+		Once you have added the new letter, go to main.css and create a new style for
+		the letter you created.
 
 	Adding Sidebar Menu Elements:
-		Go to index.html of the main page. The file contains a div class called menu-wrap. All side bar items are sub divs that reside in this menu-wrap div.
+		Go to index.html of the main page. The file contains a div class called menu-wrap.
+		All side bar items are sub divs that reside in this menu-wrap div.
 
 
 
