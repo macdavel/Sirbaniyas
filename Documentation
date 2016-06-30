@@ -11,7 +11,10 @@ Dependencies:
 
 File Structure:
 
-This is a 2 page static website. The first page is the home page and the other page sits in the pictures folder and contains the files for the 'behind the scenes' page. Below is the file structure for the website.
+This is a 2 page static website. The first page is the home page
+and the other page sits in the pictures folder and contains 
+the files for the 'behind the scenes' page. 
+Below is the file structure for the website.
 
 	CSS
 		Main.css - General styling for the page
