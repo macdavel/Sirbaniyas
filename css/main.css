@@ -124,14 +124,14 @@ body{
 
 img[src^='http://ikidsawards.kidscreen.com/Content/images/dotCircle.png?i=']{
     -webkit-filter: grayscale(0);
-    cursor: url('../img/pets-bird-icontp.png'),pointer;
+    cursor: url('../img/finalicon.png'),pointer;
 }
 
 img[src^='http://ikidsawards.kidscreen.com/Content/images/dotCircle.png?j=']{
     -webkit-filter: grayscale(0);
     -webkit-filter: hue-rotate(180deg);
     filter: hue-rotate(180deg);
-    cursor: url('../img/pets-bird-icontp.png'), pointer;
+    cursor: url('../img/finalicon.png'), pointer;
     
 }
 .mymarkers{

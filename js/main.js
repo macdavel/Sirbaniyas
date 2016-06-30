@@ -2,12 +2,6 @@ var map;
 $('.hidden-text').hide();
 $('#instructions').show();
 
-$(document).ready(function(){
-
-// google.maps.event.addDomListener(window, 'load', initialize);
-
-
-});
 
 
 
@@ -40,23 +34,11 @@ function initialize() {
 
 
 
-
-
-
-
-
-
-
-
-
 //##################
 //################## MENU JavaScript
 //##################
 //##################
 
-//Hiding text in the Menu
-// $("p").hide();
-// $("#the_tea").hide();
 
 
 
@@ -213,11 +195,11 @@ marker_objects = [
 [24.31437,52.57271,"266935915",2016,"https://scontent.fash1-1.fna.fbcdn.net/hphotos-xap1/v/t1.0-9/10701939_10152833240117674_5903542997097304451_n.jpg?oh=2564c99ee1c49f42cdf2058b848d916a&oe=55E66869"],
 [24.32780,52.55490,"266935912",2016,"https://scontent.fash1-1.fna.fbcdn.net/hphotos-xap1/v/t1.0-9/10701939_10152833240117674_5903542997097304451_n.jpg?oh=2564c99ee1c49f42cdf2058b848d916a&oe=55E66869"],
 [24.32780,52.63549,"266935910",2016,"https://scontent.fash1-1.fna.fbcdn.net/hphotos-xap1/v/t1.0-9/10701939_10152833240117674_5903542997097304451_n.jpg?oh=2564c99ee1c49f42cdf2058b848d916a&oe=55E66869"],
-[24.29756,52.58975,"266935901",2016,"https://scontent.fash1-1.fna.fbcdn.net/hphotos-xap1/v/t1.0-9/10701939_10152833240117674_5903542997097304451_n.jpg?oh=2564c99ee1c49f42cdf2058b848d916a&oe=55E66869"],
-[24.29110,52.58354,"266935899",2016,"https://scontent.fash1-1.fna.fbcdn.net/hphotos-xap1/v/t1.0-9/10701939_10152833240117674_5903542997097304451_n.jpg?oh=2564c99ee1c49f42cdf2058b848d916a&oe=55E66869"],
-[24.31595,52.56976,"266935896",2016,"https://scontent.fash1-1.fna.fbcdn.net/hphotos-xap1/v/t1.0-9/10701939_10152833240117674_5903542997097304451_n.jpg?oh=2564c99ee1c49f42cdf2058b848d916a&oe=55E66869"],
-[24.32395,52.61715,"266935894",2016,"https://scontent.fash1-1.fna.fbcdn.net/hphotos-xap1/v/t1.0-9/10701939_10152833240117674_5903542997097304451_n.jpg?oh=2564c99ee1c49f42cdf2058b848d916a&oe=55E66869"],
-[24.27880,52.62516,"266935893",2016,"https://scontent.fash1-1.fna.fbcdn.net/hphotos-xap1/v/t1.0-9/10701939_10152833240117674_5903542997097304451_n.jpg?oh=2564c99ee1c49f42cdf2058b848d916a&oe=55E66869"]
+[24.29756,52.58975,"271194764",2016,"https://scontent.fash1-1.fna.fbcdn.net/hphotos-xap1/v/t1.0-9/10701939_10152833240117674_5903542997097304451_n.jpg?oh=2564c99ee1c49f42cdf2058b848d916a&oe=55E66869"],
+[24.29110,52.58354,"271194760",2016,"https://scontent.fash1-1.fna.fbcdn.net/hphotos-xap1/v/t1.0-9/10701939_10152833240117674_5903542997097304451_n.jpg?oh=2564c99ee1c49f42cdf2058b848d916a&oe=55E66869"],
+[24.31595,52.56976,"271194759",2016,"https://scontent.fash1-1.fna.fbcdn.net/hphotos-xap1/v/t1.0-9/10701939_10152833240117674_5903542997097304451_n.jpg?oh=2564c99ee1c49f42cdf2058b848d916a&oe=55E66869"],
+[24.32395,52.61715,"271194452",2016,"https://scontent.fash1-1.fna.fbcdn.net/hphotos-xap1/v/t1.0-9/10701939_10152833240117674_5903542997097304451_n.jpg?oh=2564c99ee1c49f42cdf2058b848d916a&oe=55E66869"],
+[24.27880,52.62516,"271194451",2016,"https://scontent.fash1-1.fna.fbcdn.net/hphotos-xap1/v/t1.0-9/10701939_10152833240117674_5903542997097304451_n.jpg?oh=2564c99ee1c49f42cdf2058b848d916a&oe=55E66869"]
 // [24.29418,52.58562,"266935917","209403831","https://scontent.fash1-1.fna.fbcdn.net/hphotos-xap1/v/t1.0-9/10701939_10152833240117674_5903542997097304451_n.jpg?oh=2564c99ee1c49f42cdf2058b848d916a&oe=55E66869"],
 
 ]
@@ -241,7 +223,7 @@ tracksLoadedCount= 0;
 
 
 
-//Helper function, called when all tracks have been loaded
+
 
 
 
@@ -270,6 +252,8 @@ function load_sounds(){
 
 }
 
+
+//Helper function, called when all tracks have been loaded
 function onTrackLoaded(track_id){
   /*
   Function: On Track Loaded
@@ -303,11 +287,10 @@ function onTracksReady(){
   /*
   Function: OnTracksReady
   
-  For 
-
-
-
-
+  
+  Called once all tracks have been loaded from soundcloud.
+  Creates google map markers and initiates markerclusterer once
+  all markers have been created.
 
 
 
@@ -344,10 +327,26 @@ function onTracksReady(){
 
 
 //Set time out functions
+// The following is for a fadeout 
+//done when a person clicks to stop a sound
 
+
+//var interval checks whether we are currently fading out a song
+//I use time intervals to 
 var interval_running = false;
 
 function fadeout(sound_obj){
+  /*
+  Function: Fade Out
+
+  Fades out a song once stop song has been triggered.
+
+  parameters:
+      SoundCloud sound object
+  Returns:
+      OnTracksReady Function
+
+  */
   interval_running= true;
   if(sound_obj.volume <= 0){
       sound_obj.stop();
@@ -365,16 +364,34 @@ function fadeout(sound_obj){
 
 
 
+
+//if a person tries to activate 2 fadeouts
+// Backup plan to stop it
+
 var fading_out = false;
 var check_vol_activated = false;
 
 
 function wait_for_fade_out(sound_obj){
+  /*
+  Function: Wait For Fade Out
+
+  Triggered when playSong has been initiated before adeout of 
+  another song completes. Waits for song to finish fadeout before playing
+  new song.
+  
+  Mainly for dealing with soundcloud bugs.
+
+  parameters:
+      SoundCloud Sound Object
+
+  */
   check_vol_activated = true;
   if( fading_out == false ){
     clearInterval(check_vol);
     SC.streamStopAll();
     if(interval_running){
+      //sometimes it does not work with just one clearInterval :( 
       clearInterval(mysound);
       clearInterval(mysound);
     };
@@ -389,12 +406,36 @@ function wait_for_fade_out(sound_obj){
 
 
 
+
+
+//Global variables keep track of markers being created
+
+//index is now obsolete. Used to assign ID to marker Images in case you want to
+//Change color of marker on click
 var index=0;
+
+
+
+//used to store markers
 var markers_list = [];
+
 
 //begin actaully creating the map
 
 function create_markers(marker_pos, mark){
+  /*
+  Function: Create Marker
+
+  Creates the markermased on information from the marker object in line 190
+
+  parameters:
+      marker position and  a list that represents the properties
+      of the Marker from . 
+  Returns:
+      Marker
+
+  */
+
   var year = marker_objects[mark][3]
 
   if (year == 2015) {
@@ -434,6 +475,20 @@ function create_markers(marker_pos, mark){
 }
 
 function add_listeners(marker, track_id){
+
+
+  /*
+  Function: Add_listeners 
+
+  Adds event listeners for a marker on the google maps object. Used to detect which
+  marker has been clicked and which sounds to play.
+
+  parameters:
+      marker object and soundcloud track_id
+  Returns:
+      
+
+  */
 
 
   // google.maps.event.addListener(marker, 'mouseover', function() {
@@ -485,7 +540,8 @@ function add_listeners(marker, track_id){
 
   google.maps.event.addListener(marker, 'click', function() {
 
-    //Colot is legacy code from when the collor used to change
+    //Color is legacy code from when the color used to change when play is clicked
+
     if(this.color == "blue"){
 
       handlePlayClick(marker, track_id);
@@ -507,7 +563,21 @@ function add_listeners(marker, track_id){
 }
 
 
+
+
+//helper function
+
 function check_play_state(marker, thesound){
+  /*
+  Function: Check Play State
+
+  Called when stop sound is activated in handleStopClick
+  Sets an interval and fades our the song. 
+
+  parameters:
+      marker object and soundcloud sound object
+
+  */
   console.log(thesound.playState);
   console.log("Firing check fade out")
   if (thesound.playState === 1){
@@ -529,6 +599,15 @@ function check_play_state(marker, thesound){
 
 
 function handlePlayClick(marker,track_id){
+  /*
+  Function: handlePlayClick
+
+  Plays a song when marker is clicked.
+
+  parameters:
+       marker and track_id
+
+  */
   console.log(fading_out);
   if(check_vol_activated){
     clearInterval(check_vol);
@@ -556,6 +635,15 @@ function handlePlayClick(marker,track_id){
 
 
 function handleStopClick(marker, track_id){
+  /*
+  Function: handleStopClick
+
+  Activates check play state to fade out sound when active marker has been clicked.
+
+  parameters:
+      marker and track_id
+
+  */
   if(check_vol_activated){
     clearInterval(check_vol);
   }
